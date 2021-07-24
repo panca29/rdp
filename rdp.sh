@@ -23,8 +23,7 @@ sudo adduser enigma chrome-remote-desktop
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
 printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debian Linux And Paste Down\n'
-read -p "Paste Here:& "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AX4XfWgYC-yCtInVd7kZ-AoA623kioK4-z7vJZk6QJizhje9NXJKYWXT3h9DoB64P8fs1Q" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME " CRP
-su - enigma -c """$CRP"""
+read -p "Paste Here:" & "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AX4XfWgYC-yCtInVd7kZ-AoA623kioK4-z7vJZk6QJizhje9NXJKYWXT3h9DoB64P8fs1Q" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME"
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 if sudo apt-get upgrade &> /dev/null
 then
